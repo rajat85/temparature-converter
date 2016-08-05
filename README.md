@@ -6,8 +6,9 @@ Steps:
 1. Clone this application from github.
 2. cd to temparature-converter.
 3. Assuming you have already installed node and npm. 
-4. execute command `npm install -g http-server`
-5. execute `http-server` 
+4. Execute command `npm install -g http-server`
+5. Execute command `npm install`
+5. Then execute `npm run dev-server` 
 
 Now, you are good to access http://localhost:8080 from your browser.
 
