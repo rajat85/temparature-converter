@@ -1,0 +1,47 @@
+<ui-view>
+	<div class="well">
+        <form ng-submit="vm.convert()">
+
+            <div class="form-group">
+              <label for="fromTemp">Temperature</label>
+              <input placeholder="please enter a temparature" class="form-control" type="number" name="temp"
+              ng-model="vm.temp"/>
+            </div>
+
+            <div class="form-group">
+              <label>From</label> <br/>
+              <label class="radio-inline">
+                <input type="radio" name="fromTempRadio" id="fromTempRadioCelsius"
+                value="celsius" ng-model="vm.fromUnit"/> Celsius
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="fromTempRadio" id="fromTempRadioFahrenheit"
+                value="fahrenheit" ng-model="vm.fromUnit"/> Fahrenheit
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>To</label> <br/>
+              <label class="radio-inline">
+                <input type="radio" name="toTempRadio" id="toTempRadioCelsius"
+                value="celsius" ng-model="vm.toUnit"/> Celsius
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="toTempRadio" id="toTempRadioFahrenheit"
+                value="fahrenheit" ng-model="vm.toUnit"/> Fahrenheit
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-default">Convert</button>
+
+        </form>
+
+        <div class="result">
+            <h3>Result</h3>
+            <div class="toTemp">
+              <p class="pull-right">{{vm.result | number:2}}</p>
+            </div>
+        </div>
+
+	</div>
+</ui-view>
